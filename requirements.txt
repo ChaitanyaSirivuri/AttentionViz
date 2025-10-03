@@ -1,0 +1,12 @@
+streamlit
+torch
+torchvision
+transformers
+accelerate
+bitsandbytes
+Pillow
+numpy
+scipy
+matplotlib
+seaborn
+deepspeed
