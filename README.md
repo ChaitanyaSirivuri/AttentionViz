@@ -1,16 +1,43 @@
-# AttentionViz: Streamlit Edition
+# AttentionViz: My Interpretability Project
 
-An interpretability tool for Large Vision-Language Models (LVLMs), adapted for Streamlit.
+Welcome to **AttentionViz**, a tool I built to explore and visualize how Large Vision-Language Models (LVLMs) "see" and "think". 
 
-This project allows you to visualize attention maps and relevancy scores for models like LLaVA-Gemma, helping to understand how these models process visual and textual information.
+This project is designed to peel back the layers of complex AI models like LLaVA-Gemma, allowing us to understand the connection between the visual input (images) and the textual output (answers).
 
-## Features
+## What Can This Project Do?
 
-- **Chat Interface**: Interact with the model using text and images.
-- **Attention Visualization**: (Coming soon to UI) Visualize attention heads and layers.
-- **Relevancy Maps**: (Coming soon to UI) See which parts of the image are most relevant to the generated text.
+*   **Interactive Chat**: You can upload any image and ask questions about it. The model will analyze the image and provide an answer.
+*   **Visual Reasoning**: It uses state-of-the-art vision-language models to understand context, objects, and relationships within images.
+*   **Interpretability (Under Development)**: The core goal of this project is to visualize the *attention mechanisms*—literally showing you which parts of an image the model focuses on when generating specific words in its response.
 
-## Setup
+## How I Built It
+
+I transformed the original research code into a streamlined, user-friendly **Streamlit** application. This involved:
+*   Refactoring the backend to decouple it from legacy UI frameworks.
+*   Designing a clean, interactive frontend using Streamlit.
+*   Optimizing the codebase for easier deployment and usage.
+
+## Getting Started
+
+### Option 1: Run with Docker (Recommended)
+
+I've containerized the application to make it easy to run without worrying about dependencies.
+
+1.  **Build the Image**:
+    ```bash
+    docker-compose build
+    ```
+
+2.  **Run the App**:
+    ```bash
+    docker-compose up
+    ```
+
+3.  **Access**: Open your browser and go to `http://localhost:8501`.
+
+### Option 2: Run Locally
+
+If you prefer to run it directly on your machine:
 
 1.  **Install Dependencies**:
     ```bash
@@ -22,18 +49,9 @@ This project allows you to visualize attention maps and relevancy scores for mod
     streamlit run streamlit_app.py
     ```
 
-## Usage
+## Models
 
-- Upload an image using the sidebar.
-- Enter a prompt in the chat input.
-- Adjust generation parameters (Temperature, Top P, etc.) in the sidebar.
-- Explore the model's responses.
+The project currently defaults to `Intel/llava-gemma-2b`, a powerful yet efficient model. You can configure other model paths in the sidebar.
 
-## Models Supported
-
-- `Intel/llava-gemma-2b` (Default)
-- Other LLaVA variants (configurable via sidebar)
-
-## Acknowledgements
-
-Based on the original [AttentionViz](https://github.com/IntelLabs/multimodal_cognitive_ai/tree/main/lvlm_interpret) work.
+---
+*Built by Chaitanya Sirivuri*

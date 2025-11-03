@@ -41,8 +41,9 @@ if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 
 # Main UI
-st.title("AttentionViz")
-st.markdown("### Interpretability Tool for Large Vision-Language Models")
+st.title("AttentionViz: My Interpretability Project")
+st.markdown("### Exploring the Inner Workings of Vision-Language Models")
+st.markdown("Built by **Chaitanya Sirivuri**")
 
 # Image Upload
 uploaded_file = st.sidebar.file_uploader("Upload an Image", type=["png", "jpg", "jpeg"])

@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  attention-viz:
+    build: .
+    container_name: attention-viz
+    ports:
+      - "8501:8501"
+    volumes:
+      # Mount the current directory to /app for live reloading during development
+      # You can remove this for production
+      - .:/app
+    environment:
+      - HF_HOME=/app/cache/huggingface
+    # If you have a GPU, uncomment the following lines to enable GPU support
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+    command: streamlit run streamlit_app.py --server.address=0.0.0.0
