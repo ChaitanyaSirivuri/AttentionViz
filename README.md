@@ -1,18 +1,18 @@
-# AttentionViz: My Interpretability Project
+# AttentionViz: Interpretability for VLMs
 
-Welcome to **AttentionViz**, a tool I built to explore and visualize how Large Vision-Language Models (LVLMs) "see" and "think". 
+Welcome to **AttentionViz**, a tool designed to explore and visualize how Large Vision-Language Models (LVLMs) "see" and "think".
 
-This project is designed to peel back the layers of complex AI models like LLaVA-Gemma, allowing us to understand the connection between the visual input (images) and the textual output (answers).
+Inspired by **GRAD-CAM**, which provides visual explanations for CNNs, this project applies similar interpretability concepts to Vision-Language Models using **attention mechanisms**. It is designed to peel back the layers of complex AI models like LLaVA-Gemma, allowing users to understand the connection between the visual input (images) and the textual output (answers).
 
 ## What Can This Project Do?
 
-*   **Interactive Chat**: You can upload any image and ask questions about it. The model will analyze the image and provide an answer.
-*   **Visual Reasoning**: It uses state-of-the-art vision-language models to understand context, objects, and relationships within images.
-*   **Interpretability (Under Development)**: The core goal of this project is to visualize the *attention mechanisms*—literally showing you which parts of an image the model focuses on when generating specific words in its response.
+*   **Interactive Chat**: Upload any image and ask questions about it. The model will analyze the image and provide an answer.
+*   **Visual Reasoning**: Uses state-of-the-art vision-language models to understand context, objects, and relationships within images.
+*   **Interpretability (Under Development)**: The core goal of this project is to visualize the *attention mechanisms*—literally showing which parts of an image the model focuses on when generating specific words in its response.
 
-## How I Built It
+## Implementation
 
-I transformed the original research code into a streamlined, user-friendly **Streamlit** application. This involved:
+The original research code has been transformed into a streamlined, user-friendly **Streamlit** application. This involved:
 *   Refactoring the backend to decouple it from legacy UI frameworks.
 *   Designing a clean, interactive frontend using Streamlit.
 *   Optimizing the codebase for easier deployment and usage.
@@ -21,7 +21,7 @@ I transformed the original research code into a streamlined, user-friendly **Str
 
 ### Option 1: Run with Docker (Recommended)
 
-I've containerized the application to make it easy to run without worrying about dependencies.
+The application has been containerized to make it easy to run without worrying about dependencies.
 
 1.  **Build the Image**:
     ```bash
@@ -37,7 +37,7 @@ I've containerized the application to make it easy to run without worrying about
 
 ### Option 2: Run Locally
 
-If you prefer to run it directly on your machine:
+To run it directly on a local machine:
 
 1.  **Install Dependencies**:
     ```bash
@@ -51,7 +51,7 @@ If you prefer to run it directly on your machine:
 
 ## Models
 
-The project currently defaults to `Intel/llava-gemma-2b`, a powerful yet efficient model. You can configure other model paths in the sidebar.
+The project currently defaults to `Intel/llava-gemma-2b`, a powerful yet efficient model. Other model paths can be configured in the sidebar.
 
 ---
 *Built by Chaitanya Sirivuri*
